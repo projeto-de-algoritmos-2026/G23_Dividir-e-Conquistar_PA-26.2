@@ -16,17 +16,22 @@ O Preço Justo registra preços de um produto e compara uma oferta com a mediana
 
 A aplicação tem três abas: **Comparar oferta**, com preço de referência e gráfico; **Meu histórico**, com cadastro e importação de CSV; e **Por dentro do algoritmo**, com explicação e eventos da última seleção.
 
-### Estado desta entrega
 
-O repositório está sendo publicado em etapas. A entrega do Gabriel cobre interface e integração. Cadastro, persistência SQLite, importação e gráfico funcionam independentemente. A análise depende da pasta `preco_justo/`, entregue separadamente pelo Luiz. Sem ela, o aplicativo informa a pendência e não apresenta resultados simulados.
+A comparação de ofertas estará disponível após a integração do núcleo de seleção.
 
 ## Screenshots
 
-A captura da interface será adicionada junto da publicação do painel.
+As capturas serão adicionadas junto da publicação da interface.
 
-O núcleo algorítmico será integrado pela dupla após a publicação da parte B.
 
-## Instalação e execução (após a publicação da interface)
+
+## 🎥 Apresentação do Projeto
+
+O vídeo será disponibilizado após a gravação da apresentação.
+
+## Instalação
+
+A interface será disponibilizada na próxima etapa de publicação.
 
 Linguagem: Python 3.10 ou superior. Interface: HTML, CSS e JavaScript, servidos localmente pela biblioteca padrão do Python. Nenhuma dependência externa é necessária para esta entrega.
 
@@ -47,32 +52,15 @@ No Windows, pode-se usar `py -3 app.py`; no Linux/macOS, `python3 app.py`. Abra 
 
 CSV: UTF-8, ponto e vírgula, cabeçalho `produto;loja;data;preco`. Datas em `AAAA-MM-DD`; valores em reais com vírgula ou ponto decimal e no máximo duas casas. Importações adicionam observações; repetir um arquivo duplica seus registros. O banco fica em `data/precos.sqlite3` e não é versionado. A interface não oferece exclusão nesta versão.
 
-## Algoritmo e modelagem
+## Outros
+
+### Mediana das medianas
 
 Os preços internos são centavos inteiros positivos. A seleção divide a entrada em grupos de até cinco, encontra suas medianas, seleciona recursivamente um pivô e particiona o conjunto. A mediana das medianas é um pivô, não necessariamente a mediana final. Em listas pares, a média dos dois valores centrais pode conter meio centavo, preservado no cálculo e arredondado apenas na exibição.
 
 No núcleo combinado: tempo O(n) no pior caso e memória adicional O(n). O gráfico ordena observações por data; essa ordenação não substitui a seleção dos preços. A comparação com o histórico não garante o menor preço disponível nem prevê valores futuros.
 
-## Divisão das responsabilidades
-
-| Integrante | Entrega |
-|---|---|
-| Gabriel | Interface, cadastro, SQLite, importação da interface, gráfico, adapter e documentação de uso |
-| Luiz | Pacote `preco_justo`: seleção BFPRT, cálculo da mediana, análise de ofertas, testes e documentação algorítmica |
-
-## Integração
-
-Luiz deve adicionar sua pasta `preco_justo/` na raiz, junto de `app.py`, e seus testes. `engine.py` importa `analisar_oferta(precos, oferta_centavos, incluir_etapas=True)`. O resultado deve conter `mediana_centavos`, `quantidade`, `mensagem`, `variacao_percentual`, `oferta_centavos` e `etapas`, conforme o contrato entregue ao grupo.
-
-## Verificação (após a publicação dos testes)
-
-```bash
-python -m unittest discover -s tests -v
-```
-
-Os testes desta entrega verificam importação, persistência e integração indisponível. Os testes de BFPRT acompanham a entrega do Luiz.
-
-## Estrutura
+### Estrutura do projeto
 
 ```text
 app.py           Servidor local e rotas
@@ -82,7 +70,3 @@ web/             Interface, estilos e comportamento
 tests/           Testes da entrega de interface
 preco_justo/     Núcleo a integrar pelo Luiz
 ```
-
-## Apresentação
-
-O vídeo da apresentação será incluído após a gravação pela dupla.
