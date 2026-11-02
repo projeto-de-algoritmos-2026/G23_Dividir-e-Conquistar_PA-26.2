@@ -1,4 +1,4 @@
-"""Contrato com o núcleo de seleção, entregue separadamente pelo Luiz."""
+"""Contrato com o núcleo de seleção."""
 from importlib.util import find_spec
 from pathlib import Path
 import sys
@@ -11,7 +11,7 @@ def disponivel():
 
 def analisar(precos, oferta):
     if not disponivel():
-        raise ValueError('Núcleo pendente: integrar a pasta preco_justo entregue pelo Luiz.')
+        raise ValueError('Núcleo pendente: a pasta preco_justo não foi encontrada na raiz.')
     from preco_justo import analisar_oferta
     return analisar_oferta(precos, oferta, incluir_etapas=True)
 
