@@ -36,7 +36,9 @@ Com `n` ímpar, `M` é o elemento de posição `⌊n/2⌋` — uma seleção. Co
 
 ## Screenshots
 
-As capturas serão adicionadas junto da publicação da interface.
+![Comparação de oferta com histórico fictício](assets/screenshots/comparacao.jpg)
+
+Histórico de sete preços fictícios: mediana de R$ 15,00 e oferta de R$ 13,00, 13,33% abaixo da referência.
 
 ## 🎥 Apresentação do Projeto
 
@@ -56,7 +58,7 @@ git clone https://github.com/projeto-de-algoritmos-2026/G23_Dividir-e-Conquistar
 cd G23_Dividir-e-Conquistar_PA-26.2
 ```
 
-A interface web será disponibilizada na próxima etapa de publicação. Até lá, o núcleo de seleção é exercitado pela demonstração em linha de comando, descrita em [Uso](#uso).
+A interface web e a demonstração em linha de comando estão disponíveis. Os dois modos usam o mesmo núcleo de seleção, descrito em [Uso](#uso).
 
 ### Windows — PowerShell
 
@@ -84,7 +86,7 @@ python3 demo.py
 
 Ela filtra o `Café Marca A 500g` entre 2026-10-01 e 2026-10-26 — sete observações — e avalia uma oferta de R$ 13,00 contra a mediana de R$ 15,00, imprimindo o resultado em JSON, inclusive as etapas da seleção.
 
-Com a interface publicada, o fluxo é:
+Na interface, o fluxo é:
 
 1. Abra **http://127.0.0.1:8501** após iniciar o servidor.
 2. Em **Meu histórico**, cadastre preços do mesmo produto — incluindo marca e peso no nome — ou importe um CSV.
@@ -156,5 +158,5 @@ G23_Dividir-e-Conquistar_PA-26.2/
 ├── tests/
 │   ├── test_core.py        # Seleção e mediana contra ordenação de referência; entradas inválidas
 │   └── test_historico.py   # Importação de CSV, filtros e rejeição de registros inválidos
-└── web/                    # Interface em HTML, CSS e JavaScript — a publicar
+└── web/                    # Interface em HTML, CSS e JavaScript
 ```
