@@ -7,8 +7,8 @@ Conteúdo da Disciplina: Dividir e Conquistar<br>
 
 |Matrícula | Aluno |
 | -- | -- |
-| 242004671 | Gabriel Ferreira |
-| 242028735 | Luiz Henrique Tomaz Moreira |
+| 242004671 | [Gabriel Ferreira](https://github.com/diangellis) |
+| 242028735 | [Luiz Henrique Tomaz Moreira](https://github.com/luizhtmoreira) |
 
 ## Sobre
 
@@ -36,9 +36,22 @@ Com `n` ímpar, `M` é o elemento de posição `⌊n/2⌋` — uma seleção. Co
 
 ## Screenshots
 
-![Comparação de oferta com histórico fictício](assets/screenshots/comparacao.jpg)
+### Comparar oferta — o preço de referência
 
-Histórico de sete preços fictícios: mediana de R$ 15,00 e oferta de R$ 13,00, 13,33% abaixo da referência.
+[![Histórico de sete preços fictícios com mediana de R$ 15,00 e oferta de R$ 13,00, 13,33% abaixo da referência](assets/screenshots/comparacao.jpg)](assets/screenshots/comparacao.jpg)
+
+A aba principal reúne o formulário da oferta, o preço de referência e o gráfico cronológico. Com sete observações do mesmo café, a mediana é R$ 15,00 e a oferta de R$ 13,00 aparece 13,33% abaixo. O valor de R$ 40,00 no histórico mostra por que a referência é a mediana: um preço extremo não desloca a comparação como deslocaria a média.
+
+<table>
+  <tr>
+    <td align="center"><a href="assets/screenshots/historico.png"><img src="assets/screenshots/historico.png" width="420" alt="Aba Meu histórico com cadastro manual, importação de CSV e a tabela de observações registradas"><br>Meu histórico — cadastro e importação</a></td>
+    <td align="center"><a href="assets/screenshots/algoritmo.png"><img src="assets/screenshots/algoritmo.png" width="420" alt="Aba Por dentro do algoritmo com as cinco etapas da última seleção, pivôs e contagens"><br>Por dentro do algoritmo — etapas da seleção</a></td>
+  </tr>
+</table>
+
+Clique nas imagens para visualizar as capturas em tamanho completo.
+
+Em **Meu histórico**, as observações entram uma a uma ou por importação de CSV, e a tabela lista tudo o que foi registrado. Em **Por dentro do algoritmo**, cada evento da última seleção aparece na ordem em que aconteceu — e a leitura é instrutiva: o primeiro pivô escolhido é R$ 40,00, justamente o preço extremo, enquanto a resposta final é R$ 15,00. É a demonstração visual de que a mediana das medianas é o pivô, não a resposta.
 
 ## 🎥 Apresentação do Projeto
 
@@ -145,6 +158,8 @@ Não se promete vantagem de tempo sobre `sorted` em conjuntos pequenos: a consta
 G23_Dividir-e-Conquistar_PA-26.2/
 ├── README.md
 ├── .gitignore
+├── assets/
+│   └── screenshots/        # Capturas usadas neste README
 ├── app.py                  # Servidor local e rotas JSON, na porta 8501
 ├── engine.py               # Adapter do núcleo e importação do CSV enviado pela interface
 ├── storage.py              # Persistência das observações em SQLite
