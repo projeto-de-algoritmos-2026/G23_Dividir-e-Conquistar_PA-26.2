@@ -156,6 +156,7 @@ G23_Dividir-e-Conquistar_PA-26.2/
 │   ├── core.py             # Seleção BFPRT, mediana em Decimal e comparação da oferta
 │   └── historico.py        # Leitura de CSV e filtro por produto e período
 ├── tests/
+│   ├── test_app.py         # Persistência, CSV e tratamento do núcleo indisponível
 │   ├── test_core.py        # Seleção e mediana contra ordenação de referência; entradas inválidas
 │   └── test_historico.py   # Importação de CSV, filtros e rejeição de registros inválidos
 └── web/                    # Interface em HTML, CSS e JavaScript
