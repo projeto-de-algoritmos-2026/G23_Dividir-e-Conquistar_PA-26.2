@@ -55,7 +55,7 @@ Em **Meu histórico**, as observações entram uma a uma ou por importação de 
 
 ## 🎥 Apresentação do Projeto
 
-O vídeo será disponibilizado após a gravação da apresentação.
+[![Apresentação do Projeto](https://img.youtube.com/vi/f0GI4EFPjNQ/maxresdefault.jpg)](https://youtu.be/f0GI4EFPjNQ)
 
 ## Instalação
 
